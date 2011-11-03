@@ -18,7 +18,7 @@ setup(
         "License :: OSI Approved :: Apache Software License",
     ],
     packages=['pysnowflakeclient', 'pysnowflakeclient.Snowflake'],
-    install_requires=['thrift>=0.61'],
-    requires=['thrift (>=0.61)'],
+    install_requires=['thrift>=0.7.0'],
+    requires=['thrift (>=0.7.0)'],
     download_url="http://github.com/downloads/erans/pysnowflakeclient/pysnowflakeclient-%s.tar.gz" % version,
 )
