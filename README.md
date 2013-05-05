@@ -17,7 +17,7 @@ Installing from source: `git clone git://github.com/erans/pysnowflakeclient.git;
 
 Requirements
 ------------
-* [thirft](http://thrift.apache.org)
+* [thrift](http://thrift.apache.org)
 
 Issues
 ------
