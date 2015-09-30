@@ -1,6 +1,8 @@
 pysnowflakeclient
 ==========
 
+[![Join the chat at https://gitter.im/erans/pysnowflakeclient](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/erans/pysnowflakeclient?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 pysnowflakeclient is a Python library to access Snowflake servers.
 Snowflake is a unique id generator written by Twitter - https://github.com/twitter/snowflake
 
