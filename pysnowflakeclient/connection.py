@@ -42,7 +42,6 @@ class Connection(object):
 
 		self._transport = TSocket.TSocket(host, port)
 		self._transport.setTimeout(socket_timeout)
-		print 'socket_timeout is', socket_timeout
 		self._transport = TTransport.TFramedTransport(self._transport)
 		self._protocol = TBinaryProtocol.TBinaryProtocol(self._transport)
 		self._client = Snowflake.Client(self._protocol)
