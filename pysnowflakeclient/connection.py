@@ -1,5 +1,5 @@
 #!/bin/env python
-# 
+#
 # Copyright 2011 Eran Sandler <eran@sandler.co.il>
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -35,18 +35,20 @@ from Snowflake.constants import *
 import consts
 
 class Connection(object):
-	def __init__(self, host, port=30303, user_agent=consts.USER_AGENT):
+	def __init__(self, host, port=30303, user_agent=consts.USER_AGENT, socket_timeout=None):
 		self._host = host
 		self._port = port
 		self._user_agent = user_agent
-		
+
 		self._transport = TSocket.TSocket(host, port)
+		self._transport.setTimeout(socket_timeout)
+		print 'socket_timeout is', socket_timeout
 		self._transport = TTransport.TFramedTransport(self._transport)
 		self._protocol = TBinaryProtocol.TBinaryProtocol(self._transport)
 		self._client = Snowflake.Client(self._protocol)
 		self._transport.open()
-		
+
 	def get_id(self):
 		return self._client.get_id(self._user_agent)
 
-		
+
